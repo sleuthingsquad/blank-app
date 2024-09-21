@@ -32,10 +32,6 @@ option = st.selectbox(
 
 st.button("Generate Suggestions", on_click = clickedFunc)
 
-# st.write(
-#     "Let's srt building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-# )
-
 # """
 # # My first app
 # Here's our first attempt at using data to create a table:
