@@ -4,8 +4,10 @@ import os
 
 
 #getting data
-data_path  = "Design_Unit1_database.xlsx"
-excel_data = pd.read_excel(data_path)
+data_path  = "Design_Unit1_database_CSV.csv"
+excel_data = pd.read_csv(data_path)
+
+st.write(excel_data.head())
 
 st.title(" Having trouble starting a conversation? ")
 st.title(" Well, you've come to the right place!")
