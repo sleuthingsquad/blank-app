@@ -1,6 +1,16 @@
 import streamlit as st
 import pandas as pd
 
+#style of the webpage
+styles = """
+<style>
+[data-testid = "stAppViewContainer"]) {
+background-color = #32ff00;
+}
+
+</style>
+"""
+st.markdown(styles, unsafe_allow_html=True)
 
 #getting data
 data_path  = "Design_Unit1_database_CSV.csv"
