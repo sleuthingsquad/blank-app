@@ -1,5 +1,11 @@
 import streamlit as st 
 import pandas as pd 
+from PIL import Image
+
+#adding logo
+#st.image(design_U1_logo.png)
+icon = Image.open('design_U1_logo2.png')
+st.image(image = icon, width = 160)
 
 
 #style of the webpage 
