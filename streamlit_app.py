@@ -7,11 +7,10 @@ from PIL import Image
 icon = Image.open('design_U1_logo2.png')
 st.image(image = icon, width = 160)
 
-
 #style of the webpage 
 m = st.markdown(""" 
 <style> 
-div.stButton > button:first-child { 
+div.stButton > button:first-child {
     background-color: #ABEAF2; 
 } 
 div.stButton > button:hover { 
@@ -31,6 +30,8 @@ div.stButton > button:selection {
 # """ 
 # st.markdown(styles, unsafe_allow_html=True) 
 
+#the above commented code produced an error. 
+
 #getting data 
 
 data_path  = "Design_Unit1_database_CSV.csv" 
@@ -38,13 +39,11 @@ data_path  = "Design_Unit1_database_CSV.csv"
 excel_data = pd.read_csv(data_path) 
 
     # a CSV file was used to avoid bugs 
-
     #an excel file needs pip to install openpyxl, which resulted in an error 
 
 
 #testing functions 
 # def testing(): 
-
 #     st.write("Testing") 
 
 #opening of the website 
@@ -64,7 +63,8 @@ st.subheader("Your Topic")
 # getting input and using it to generate output 
 
 def clickedFunc(): 
-    st.write("Here are some suggestions for you:") 
+    st.write("Here are some suggestions for you:")
+    st.write("Note: Please choose a movie based on appropriate age ratings and consider the warnings for the movies given on trusted websites. ") 
 
     #generating output 
     name = excel_data.loc[excel_data.Topic == option]["Name"]  
@@ -88,23 +88,15 @@ def clickedFunc():
 
 option = st.selectbox( 
     " ", 
-    ("Bullying", "Racism", "Exam Stress"), 
+    ("Bullying", "Racism", "Exam Stress", "Mental illness",
+    "Crime" ), 
     placeholder="Your movie topic" 
 ) 
 
 #st.button("Gen", on_click = clickedFunc) 
 
     #using the above code results in the output being printed at the top of the page  
-
     #thus, the below piece of code is used 
 
 if st.button("Generate Suggestions"): 
-
     clickedFunc() 
-
-# """ 
-# # My first app 
-# Here's our first attempt at using data to create a table: 
-# """ 
-
-#in design doc, add final step as launching the app 
